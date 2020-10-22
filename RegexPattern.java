@@ -11,10 +11,18 @@ public class RegexPattern {
 		String result = (b) ? "valid" : "invalid" ;
 		return result;
 	}
+	public String validateLastName() {
+		System.out.println("Enter Last Name: ");
+		String lastName = sc.next();
+		boolean b = Pattern.matches("^[A-Z]{1}[a-z]{2,}", lastName);
+		String result = (b) ? "valid" : "invalid" ;
+		return result;
+	}
 	public static void main(String[] args) {
 //		System.out.println("Welcome Master");
 		RegexPattern reg = new RegexPattern();
 		System.out.println("FirstName is : " + reg.validateFirstName());
+		System.out.println("Lastname is : " + reg.validateLastName());
 	}
 
 }
