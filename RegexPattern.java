@@ -32,6 +32,13 @@ public class RegexPattern {
 		String result = (b) ? "valid" : "invalid" ;
 		return result;
 	}
+	public String validatePassword() {
+		System.out.println("Enter password: ");
+		String pwd = sc.next();
+		boolean b = Pattern.matches("^[A-Za-z0-9]{8,}$", pwd);
+		String result = (b) ? "valid" : "invalid" ;
+		return result;
+	}
 	public static void main(String[] args) {
 //		System.out.println("Welcome Master");
 		RegexPattern reg = new RegexPattern();
@@ -39,6 +46,7 @@ public class RegexPattern {
 		System.out.println("Lastname is : " + reg.validateLastName());
 		System.out.println("Email is : " + reg.validateEmail());
 		System.out.println("Mobile Number is : " + reg.validateMobileNo());
+		System.out.println("Password is : " + reg.validatePassword());
 	}
 
 }
