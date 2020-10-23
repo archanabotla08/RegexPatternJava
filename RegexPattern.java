@@ -25,12 +25,20 @@ public class RegexPattern {
 		String result = (b) ? "valid" : "invalid" ;
 		return result;
 	}
+	public String validateMobileNo() {
+		System.out.println("Enter Mobile Number: ");
+		String number = sc.next();
+		boolean b = Pattern.matches("([9][1]){1}([7-9]{1})([0-9]{9})$", number);
+		String result = (b) ? "valid" : "invalid" ;
+		return result;
+	}
 	public static void main(String[] args) {
 //		System.out.println("Welcome Master");
 		RegexPattern reg = new RegexPattern();
 		System.out.println("FirstName is : " + reg.validateFirstName());
 		System.out.println("Lastname is : " + reg.validateLastName());
 		System.out.println("Email is : " + reg.validateEmail());
+		System.out.println("Mobile Number is : " + reg.validateMobileNo());
 	}
 
 }
