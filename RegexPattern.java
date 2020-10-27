@@ -35,7 +35,7 @@ public class RegexPattern {
 	public String validatePassword() {
 		System.out.println("Enter password: ");
 		String pwd = sc.next();
-		boolean b = Pattern.matches("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$", pwd);
+		boolean b = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$", pwd);
 		String result = (b) ? "valid" : "invalid" ;
 		return result;
 	}
